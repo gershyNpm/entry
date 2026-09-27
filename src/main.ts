@@ -49,7 +49,7 @@ type FormatInp = {
   objDepth?: number,  // How many levels to recurse into objects
   maxLineLen?: number  // How wide a line can be
 };
-const format = (val, opts: FormatInp = { objDepth: 7, maxLineLen: 100 }, d = 0, pfx = '', seen = new Map()): string => {
+const format = (val, opts: FormatInp = {}, d = 0, pfx = '', seen = new Map()): string => {
   
   // Converts any value to a human-readable string
   
@@ -62,9 +62,10 @@ const format = (val, opts: FormatInp = { objDepth: 7, maxLineLen: 100 }, d = 0, 
   if (val === null) return bFmtSet('null', 'green');
   if (val !== val) return bFmtSet('nan', 'green');
   
-  if (isCls(val, Number)) return bFmtSet(val.toString(10), 'green');
+  if (isCls(val, Number))  return bFmtSet(val.toString(10), 'green');
   if (isCls(val, Boolean)) return bFmtSet(val ? 'T' : 'F', 'green');
-  if (isCls(val, Buffer)) return bFmtSet(`Buffer { length: ${val.length} }`, 'green');
+  if (isCls(val, Buffer))  return bFmtSet(`Buffer { length: ${val.length} }`, 'green');
+  if (isCls(val, Date))    return bFmtSet(`Date { utcMs: ${+val} }`, 'green');
   
   if (isCls(val, String)) {
     

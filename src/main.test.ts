@@ -89,12 +89,12 @@ testRunner([
       `[test.launch] {}\n`,
       String[cl.baseline](`
         | [test.haha] {
-        | [test.haha] ¦ x ---: { y: 'xxxxxxxxxxxxxxxxxxxxxxxx…' },
-        | [test.haha] ¦ xx --: 'xxxxxxxxxxxxxxxxxxxxxxxx…',
+        | [test.haha] ¦ x ---: { y: 'xxxxxxxxxxxx…xxxxxxxxxxxx' },
+        | [test.haha] ¦ xx --: 'xxxxxxxxxxxx…xxxxxxxxxxxx',
         | [test.haha] ¦ xxx -: 'BigInt(...)',
-        | [test.haha] ¦ xxxxx: { y: 'xxxxxxxxxxxxxxxxxxxxxxxx…' },
-        | [test.haha] ¦ a ---: { b: { c: 'xxxxxxxxxxxxxxxxxxxxxxxx…' } },
-        | [test.haha] ¦ h ---: { i: { j: [ 'xxxxxxxxxxxxxxxxxxxxxxxx…' ] } },
+        | [test.haha] ¦ xxxxx: { y: 'xxxxxxxxxxxx…xxxxxxxxxxxx' },
+        | [test.haha] ¦ a ---: { b: { c: 'xxxxxxxxxxxx…xxxxxxxxxxxx' } },
+        | [test.haha] ¦ h ---: { i: { j: [ 'xxxxxxxxxxxx…xxxxxxxxxxxx' ] } },
         | [test.haha] ¦ lines: """
         | [test.haha] ¦ ¦ | xxx
         | [test.haha] ¦ ¦ | xxx
